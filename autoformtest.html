@@ -1,0 +1,29 @@
+<head>
+  <title>autoformtest</title>
+</head>
+
+<body>
+  <h1>Test of Autoform and friends</h1>
+	<div>
+  {{>books}}
+	</div>
+	
+	<div>
+		{{> insertBookForm}}
+	</div>
+  
+</body>
+
+<template name="books">
+	{{#each booklist}}
+	<div>
+		{{this.title}}
+	</div>
+	{{/each}}
+  
+</template>
+
+
+<template name="insertBookForm">
+  {{> quickForm collection="Books" id="insertBookForm" type="insert"}}
+</template>
