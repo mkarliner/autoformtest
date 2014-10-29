@@ -39,6 +39,6 @@ Schemas.Book = new SimpleSchema({
 
 Books.attachSchema(Schemas.Book);
 
-var Images = new FS.Collection("images", {
+Images = new FS.Collection("images", {
   stores: [new FS.Store.FileSystem("images", {path: "~/uploads"})]
 });

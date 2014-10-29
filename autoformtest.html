@@ -17,7 +17,8 @@
 <template name="books">
 	{{#each booklist}}
 	<div>
-		{{this.title}}
+		{{this.title}} 
+		<img src="{{image this.fileId}}" height="200" width="200"/>
 	</div>
 	{{/each}}
   
@@ -27,3 +28,4 @@
 <template name="insertBookForm">
   {{> quickForm collection="Books" id="insertBookForm" type="insert"}}
 </template>
+
